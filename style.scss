@@ -1,0 +1,123 @@
+$purple: hsl(259, 100%, 65%);
+$lightRed: hsl(0, 100%, 67%);
+$white: hsl(0, 0%, 100%);
+$offWhite: hsl(0, 0%, 94%);
+$lightGrey: hsl(0, 0%, 86%);
+$smokeGrey: hsl(0, 1%, 44%);
+$offBlack: hsl(0, 0%, 8%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $offWhite;
+  position: relative;
+  .container {
+    width: 87%;
+    border-radius: 25px 25px 100px 25px;
+    background-color: $white;
+    padding: 45px 23px;
+    margin-top: 22%;
+    header {
+      position: relative;
+      .date {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div {
+          width: 30%;
+          input {
+            width: 100%;
+            height: 55px;
+            border: 1px solid $lightGrey;
+            border-radius: 7px;
+            padding: 0 15px;
+            font-size: 20px;
+            transition: all 0.3s;
+            outline: none;
+            font-weight: 900;
+            color: $offBlack;
+            &:focus {
+              border-color: $purple;
+              cursor: pointer;
+            }
+          }
+          label {
+            font-size: 14px;
+            color: $smokeGrey;
+            display: block;
+            margin-bottom: 5px;
+            transform: translateY(3px);
+            letter-spacing: 1.5px;
+          }
+          .error-empty {
+            display: none;
+            &::first-letter{
+              text-transform: uppercase;
+            }
+          }
+          .error-empty-span {
+            display: block !important;
+            color: $lightRed !important;
+          }
+          .error-empty-input {
+            border-color: $lightRed;
+          }
+        }
+      }
+      .hr {
+        hr {
+          position: absolute;
+          bottom: 19%;
+          width: 100%;
+          background-color: $lightGrey;
+          border: none;
+          height: 1px;
+          border-radius: 20px;
+        }
+        #submit {
+          background-color: $purple;
+          border-radius: 50%;
+          border: none;
+          width: 65px;
+          height: 65px;
+          margin-top: 12%;
+          margin-left: 50%;
+          transform: translateX(-50%);
+          transition: all 0.3s;
+          img {
+            width: 40%;
+          }
+          &:hover {
+            background-color: $offBlack;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    main {
+      margin-top: 10%;
+      line-height: 1.15;
+      h1 {
+        font-style: italic;
+        font-size: 54px;
+        span {
+          color: $purple;
+        }
+      }
+    }
+  }
+  .design {
+    position: absolute;
+    z-index: 1;
+    // width: 100%;
+    // height: 100%;
+  }
+}
+@import "mediaQuery";

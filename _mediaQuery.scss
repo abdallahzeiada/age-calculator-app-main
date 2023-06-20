@@ -1,0 +1,66 @@
+@media (min-width: 401px) {
+  body {
+    align-items: center;
+    .container {
+      padding: 55px;
+      margin: 0;
+      border-radius: 25px 25px 200px 25px;
+      width: 840px;
+      height: 650px;
+      header {
+        .date {
+          justify-content: flex-start;
+          gap: 33px;
+          div {
+            width: 22%;
+            input {
+              height: 70px;
+              transform: translateY(10px);
+              font-size: 30px;
+              padding: 0 25px;
+            }
+            label {
+              transform: translateY(0);
+              letter-spacing: 2px;
+              margin: 0;
+            }
+            .error-empty {
+              //   display: block;
+              font-size: 13px;
+              transform: translateY(20px);
+              color: $lightRed;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+        .hr {
+          hr {
+            bottom: 19%;
+          }
+          #submit {
+            height: 95px;
+            width: 95px;
+            margin: 0;
+            margin-left: 100%;
+            transform: translate(-100%, 13%);
+            img {
+              width: 50%;
+            }
+          }
+        }
+      }
+      main {
+        margin-top: 10px;
+        line-height: 1.1;
+        h1 {
+          font-size: 105px;
+          letter-spacing: -2px;
+          span {
+            letter-spacing: 15px;
+            margin-right: -25px;
+          }
+        }
+      }
+    }
+  }
+}
